@@ -24,3 +24,26 @@ body{
   white-space: nowrap;
   flex-shrink: 0;
 }
+
+.gridSolve {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  padding: 20px;
+  gap: 10px;
+}
+
+.gridObjects {
+  border: #747379 solid 2px;
+  margin-bottom: 16px;
+  padding: 10px;
+  gap: 20px;
+  position: relative;
+}
+.gridObjects:hover  {
+  opacity: 0.8;
+}
+.text {
+  white-space: nowrap;      /* Не переносить на новую строку */
+  overflow: hidden;         /* Скрыть всё, что не помещается */
+  text-overflow: ellipsis;
+}
