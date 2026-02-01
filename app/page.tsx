@@ -19,24 +19,38 @@ export default async function page() {
       <div className="">
         <ul className="gridSolve">
           {posts.data.map((post: any) => (
-            <li key={post.mal_id} className="gridObjects">
-              <div className=" ">
+            <li key={post.mal_id} className="gridObjects group relative w-55 overflow-hidden rounded-2xl bg-zinc-900 shadow-lg transition hover:opacity-80">
 
-                <Image
-                  src={post.images.jpg.image_url}
-                  alt={post.title}
-                  width={350}
-                  height={400}
-                />
-                <div className="text">
-                  <Link href={`/anime/${post.mal_id}`}>
-                    <h2 className="text-xl font-bold">{post.title}</h2>
-                  </Link>
-                  <p className="text-sm text-gray-400">{post.type}</p>
-                  <p className="text-sm text-gray-400 ">Score: {post.score}</p>
-                  <p className="text-sm text-gray-400">{post.year}</p>
+
+              {/* Poster */}
+              <Link href={`/anime/${post.mal_id}`}>
+                <div className="relative h-80">
+                  <Image
+                    src={post.images.jpg.large_image_url}
+                    alt={post.title}
+
+                    fill
+                    className="object-cover"
+                  />
+
+                  {/* Gradient */}
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
                 </div>
-              </div>
+
+                {/* Info */}
+                <div className="absolute bottom-0 p-3">
+                  <h3 className="text-sm font-semibold text-white line-clamp-2">
+                    {post.title}
+                  </h3>
+
+                  <div className="mt-1 flex items-center gap-2">
+                    <span className="text-yellow-400 text-sm">⭐ {post.score}</span>
+                    <span className="text-xs text-zinc-400">{post.year}</span>
+                  </div>
+                </div>
+              </Link>
+
+
 
             </li>
           ))}

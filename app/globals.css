@@ -3,6 +3,12 @@
 
 body{
   background-color: #02000f;
+  box-sizing: border-box;
+  overflow-x: auto;
+  
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @keyframes marquee {
@@ -27,23 +33,26 @@ body{
 
 .gridSolve {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  padding: 20px;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 10px;
 }
 
 .gridObjects {
-  border: #747379 solid 2px;
-  margin-bottom: 16px;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  margin: 5px;
   gap: 20px;
-  position: relative;
+
 }
-.gridObjects:hover  {
-  opacity: 0.8;
-}
-.text {
-  white-space: nowrap;      /* Не переносить на новую строку */
-  overflow: hidden;         /* Скрыть всё, что не помещается */
-  text-overflow: ellipsis;
+
+@media (max-width: 568px) {
+  .gridSolve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
 }
