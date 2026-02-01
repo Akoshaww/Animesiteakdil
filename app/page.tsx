@@ -11,9 +11,8 @@ export default async function page() {
   try {
     const data = await fetch('https://api.jikan.moe/v4/anime?limit=10', { cache: 'no-store' })
     const posts = await data.json()
-    
     console.log(posts);
-
+    
     return (
       <section className="py-8 text-white w-full h-screen">
         <Marquee />
