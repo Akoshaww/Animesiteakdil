@@ -16,8 +16,9 @@ export default async function Page({
                     <Image
                         src={post.data.images.jpg.large_image_url}
                         alt={post.data.title}
-                        width={220}
-                        height={320}
+                        fill={false}
+                        width={300}
+                        height={450}
                         className="rounded-2xl"
                     />
                     <div className="flex gap-2 ">

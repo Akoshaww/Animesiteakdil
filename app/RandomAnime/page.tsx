@@ -1,7 +1,7 @@
 
 
 export default async function page() {
-    try {
+    
          const data = await fetch('https://api.jikan.moe/v4/random/anime', { cache: 'no-store' })
          const posts = await data.json()
         return (
@@ -23,13 +23,5 @@ export default async function page() {
             </div> 
             
         )
-    } catch (error) {
-        console.log(error);
-        return (
-            <div className="text-white font-bold text-3xl">
-                failed to load random anime page
-            </div>
-        )
-    }
 
 }
