@@ -20,7 +20,7 @@ export default async function Page({
                         height={320}
                         className="rounded-2xl"
                     />
-                    <div className="flex gap-4 mt-2">
+                    <div className="flex gap-2 ">
                         <span className="text-yellow-400 text-sm"><p className="text-white font-bold ">Ratings:</p> ⭐ {post.data.score}</span>
                         <span className="text-xs text-zinc-400"><p className="text-white font-bold ">Дата выхода:</p>{post.data.year}</span>
                         <span className="text-xs text-zinc-400"><p className="text-white font-bold ">Количество эпизодов:</p>{post.data.episodes}</span>

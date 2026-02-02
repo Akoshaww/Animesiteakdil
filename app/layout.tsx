@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+
 import GooeyNav from "@/components/ui/GooeyNav";
 
 const geistSans = Geist({
@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="text-white py-8 px-4 w-full flex justify-center items-center sm:gap-8 border-b  flex-col sm:flex-row gap-8 ">
-          <span className="text-4xl  font-extrabold bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">/AscendoByArchon</span>
+          <span className="sm:text-4xl text-2xl font-extrabold bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">/AscendoByArchon</span>
 
           <GooeyNav
             
