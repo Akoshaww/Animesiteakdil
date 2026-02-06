@@ -20,7 +20,7 @@ export default async function Page({
   const posts = await res.json();
 
   return (
-    <section className="py-8 text-white w-full min-h-screen">
+    <section className="py-4 text-white w-full min-h-screen">
       <Marquee />
       <Search />
 
@@ -71,3 +71,4 @@ export default async function Page({
   );
 }
 
+          

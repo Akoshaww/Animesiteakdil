@@ -22,7 +22,7 @@ export default function Search() {
   }, 500);
 
   return (
-    <div className="w-full flex justify-center items-center mb-6">
+    <div className="w-full flex justify-center items-center mb-4">
       <input
         className="w-1/2 p-4 rounded-2xl bg-zinc-800 text-white"
         placeholder="Search for an anime..."
